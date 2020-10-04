@@ -2,4 +2,5 @@ import numpy as np
 
 
 class Model:
-    pass
+    def __init__():
+        pass
