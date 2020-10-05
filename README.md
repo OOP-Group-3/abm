@@ -13,6 +13,7 @@ git checkout -b new_branch
 - Then we create the new conda env and get some basic packages installed. For now, we'll use Python 3.6 (might have to use old tools that need Python 3.6 only)
 ```bash
 conda create -n abm python=3.6
+conda activate abm
 conda install numpy matplotlib pandas bokeh black flake8
 python setup.py install
 ```
