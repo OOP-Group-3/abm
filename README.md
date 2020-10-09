@@ -32,3 +32,12 @@ python setup.py install
 - Before pushing any code, do `black abm` from the root folder.
 - While coding, VS Code, will show you all the linting errors with `flake8`
 - All folders must have a `__init__.py` for our repo to be a valid package.
+
+# Version list
+
+| Library    | Version |
+| ---------- | ------  |
+| Bokeh      | 0.12.14 |
+| Django     | 2.2.1   |
+| Jinja2     | 2.11.2  |
+| python     | 2.8.1   |
