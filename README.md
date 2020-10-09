@@ -2,10 +2,21 @@
 OOP Project for Group 3. Agent-Based Model for Pandemic Simulation.
 
 # Installation instructions:
+First, press the fork button in the top right and fork the repo to your own GitHub accounts and then follow the instructions below:
 ```bash
 cd <workdir>
-git clone https://github.com/OOP-Group-3/abm
+git clone https://github.com/<your-github-user-name>/abm
 git checkout -b new_branch
+```
+When working with the code, create a new branch **in your fork itself** and when you push, use the command:
+```bash
+git push --set-upstream origin <branch-name>
+```
+After this, open your GitHub and raise a PR. When you need to update your repo with the changes in the main repo.
+```bash
+git checkout <branch-you-are-working-in>
+git fetch upstream
+git merge upstream/main main
 ```
 # Python Team Instructions:
 - First, get Conda from either [Anaconda](https://www.anaconda.com/products/individual) (for Windows and Linux) or [Miniconda](https://docs.conda.io/en/latest/miniconda.html) (mainly for Linux, there's some BT getting it to work on Windows). Use Miniconda if you can. Go through basic usage of Conda.
