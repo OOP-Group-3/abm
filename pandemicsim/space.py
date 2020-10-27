@@ -1,7 +1,8 @@
 import itertools
 import numpy as np
 from typing import Any, Dict, Iterable, Iterator, List, Optional, Set, Tuple, Union
-from agent import Agent
+
+from pandemicsim.agent import Agent
 
 GridContent = Union[Optional[Agent], Set[Agent]]
 FloatCoordinate = Union[Tuple[float, float], np.ndarray]
@@ -119,3 +120,8 @@ class ContinuousSpace:
 		""" Check if a point is out of bounds. """
 		x, y = pos
 		return x < self.x_min or x >= self.x_max or y < self.y_min or y >= self.y_max
+
+	# def plot(self):
+	# 	for point in self._agent_points:
+	# 		plt.plot(point[0], point[1])
+		

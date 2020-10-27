@@ -1,13 +1,11 @@
 from setuptools import setup, find_packages
 
-
 def readme() -> str:
     with open("README.md") as f:
         return f.read()
 
-
 setup(
-    name="abm",
+    name="pandemicsim",
     version="0.0.0",
     description="Agent-Based Model for Pandemic Simulations",
     long_description=readme(),

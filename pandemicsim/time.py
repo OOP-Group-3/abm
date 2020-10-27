@@ -1,17 +1,14 @@
 from collections import OrderedDict
 from typing import Dict, Iterator, List, Optional, Union
 
-from agent import Agent
-from model import Model
+from pandemicsim.agent import Agent
+from pandemicsim.model import Model
 
 class BaseScheduler:
     """ Simplest scheduler; activates agents one at a time, in the order
     they were added.
 
     Assumes that each agent added has a *step* method which takes no arguments.
-
-    (This is explicitly meant to replicate the scheduler in MASON).
-
     """
 
     def __init__(self, model: Model) -> None:
@@ -42,8 +39,11 @@ class BaseScheduler:
 
     def step(self) -> None:
         """ Execute the step of all the agents, one at a time. """
+        print("Step: ", self.steps)
         for agent in self.agent_buffer(shuffled=False):
             agent.step()
+            # debug
+            print(agent.pos)
         self.steps += 1
         self.time += 1
 

@@ -1,10 +1,10 @@
-from model import Model
+from pandemicsim.model import Model
 from random import Random
 
 class Agent:
 	""" Base class for a model agent. """
 
-	def __init__(self, unique_id: int, model: Model) -> None:
+	def __init__(self, unique_id: int = None, model: Model = None) -> None:
 		""" Create a new agent. """
 		self.unique_id = unique_id
 		self.model = model
