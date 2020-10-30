@@ -1,7 +1,7 @@
 from typing import Dict, List, Optional, Set, Tuple, Union
 import numpy as np
 
-from pandemicsim.agents import Agent
+from pandemicsim.agents.agents import Agent
 
 GridContent = Union[Optional[Agent], Set[Agent]]
 FloatCoordinate = Union[Tuple[float, float], np.ndarray]
@@ -22,7 +22,7 @@ to store agent objects, to speed up neighborhood lookups.
         self.width = width
         self.height = height
 
-        self._agent_points = None  # type: np.ndarray of FloatCoordinates
+        self._agent_points = None   # type: np.ndarray of FloatCoordinates
         self._index_to_agent = {}  # type: Dict[int, Agent]
         self._agent_to_index = {}  # type: Dict[Agent, int]
 
@@ -75,6 +75,9 @@ to store agent objects, to speed up neighborhood lookups.
         # The largest index is now redundant
         del self._index_to_agent[max_idx]
         agent.pos = None
+
+    def get_positions(self) -> np.ndarray:
+        return self._agent_points
 
     def get_neighbors(
         self, pos: FloatCoordinate, radius: float, include_center: bool = True

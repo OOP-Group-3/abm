@@ -22,7 +22,8 @@ class Model:
         """
 
         self.running = True
-        self.schedule = None
+        self.schedule = None if "schedule" not in kwargs else self.schedule
+        self.space = None if "space" not in kwargs else self.space
         self.current_id = 0
 
     def run_model(self) -> None:

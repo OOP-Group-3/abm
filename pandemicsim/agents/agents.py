@@ -5,6 +5,7 @@ import numpy as np
 class Person(Agent):
     def __init__(self, unique_id, pos, model=None):
         super().__init__(unique_id, model)
+        self.type = "person"
         self.pos = pos  # np.array(float32)
         self.mobility = 1
 
