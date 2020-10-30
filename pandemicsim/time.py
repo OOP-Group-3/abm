@@ -1,8 +1,9 @@
 from collections import OrderedDict
 from typing import Dict, Iterator, List, Optional, Union
 
-from pandemicsim.agent import Agent
-from pandemicsim.model import Model
+from pandemicsim.agents import Agent
+from pandemicsim.models import Model
+
 
 class BaseScheduler:
     """ Simplest scheduler; activates agents one at a time, in the order

@@ -1,6 +1,7 @@
 import random
 from typing import Any, Optional
 
+
 class Model:
     """ Base class for models. """
 
